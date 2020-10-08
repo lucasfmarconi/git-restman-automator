@@ -22,7 +22,7 @@ namespace git_restman_automator.Connectors.Util
 
             client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-            var stringTask = client.GetStringAsync(uri.AbsolutePath);
+            var stringTask = client.GetStringAsync(uri.AbsoluteUri);
             var msg = await stringTask;
             return msg;
         }
